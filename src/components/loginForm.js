@@ -58,7 +58,6 @@ class LoginForm extends Component {
 } // end of class
 
 const mapStateToProps = (state) => {
-  console.log('app state', state);
   return {
     state
   }
