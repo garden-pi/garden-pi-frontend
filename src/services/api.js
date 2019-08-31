@@ -78,7 +78,7 @@ export const createPlant = plant => fetchWithAuth("plants", {
 })
 
 export const deletePlant = id => fetchWithAuth(`plants/${id}`, {
-  methof: "DELETE"
+  method: "DELETE"
 })
 
 // Logs
