@@ -13,12 +13,11 @@ const ActiveLink = ({ to, pathname, children }) => (
 
 const Header = props => {
   const [navOpen, setNavOpen] = useState(false);
-
   let loggingOut = () => {
     props.logoutUser();
     props.history.push("/");
   };
-
+if (props.state.currentUser){
   return (
     <nav className={`header${navOpen ? " open" : ""}`}>
       <div className="hamburger" onClick={() => setNavOpen(!navOpen)}>
@@ -26,6 +25,7 @@ const Header = props => {
         <div />
         <div />
       </div>
+
       <div className="nav-links">
         <ActiveLink to="/about" pathname={props.location.pathname}>
           About
@@ -42,6 +42,27 @@ const Header = props => {
       </div>
     </nav>
   );
+}; return (
+  <nav className={`header${navOpen ? " open" : ""}`}>
+    <div className="hamburger" onClick={() => setNavOpen(!navOpen)}>
+      <div />
+      <div />
+      <div />
+    </div>
+
+    <div className="nav-links">
+      <ActiveLink to="/" pathname={props.location.pathname}>
+        Home
+      </ActiveLink>
+      <ActiveLink to="/about" pathname={props.location.pathname}>
+        About
+      </ActiveLink>
+      <div className="link" onClick={() => loggingOut()}>
+
+      </div>
+    </div>
+  </nav>
+)
 };
 
 const mapStateToProps = state => {

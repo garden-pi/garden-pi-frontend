@@ -7,7 +7,7 @@ const Login = () => {
 
   return(
     <div className="login">
-      <Header />
+       <Header login={true} />
       <div className="login-wrapper">
         <LoginForm />
       </div>

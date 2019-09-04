@@ -7,6 +7,12 @@ import '../css/loginForm.css';
 
 class LoginForm extends Component {
 
+  componentDidUpdate(prevProps, prevState){
+    if (this.props.state.currentUser) {
+      this.props.history.push('/profile')
+    }
+  }
+
   state = {
     email: '',
     password: ''
@@ -21,7 +27,6 @@ class LoginForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     this.props.loginUser(this.state)
-    this.props.history.push('/profile')
   }
 
   render(){
@@ -53,7 +58,6 @@ class LoginForm extends Component {
 } // end of class
 
 const mapStateToProps = (state) => {
-  console.log('app state', state);
   return {
     state
   }

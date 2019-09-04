@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { NavLink, withRouter } from 'react-router-dom';
 import * as actions from '../actions/actions'
 import '../css/signupForm.css';
 
@@ -50,8 +51,16 @@ class SignupForm extends Component {
             </div>
           </div>
         </div>
-        <div className='bottombox'>
+        <div className='bottombox-signup'>
+          <div>
           <input type="submit" value="Submit" className='signup-submit' />
+          </div>
+          <div className='already'>
+          <NavLink to="/login" activeClassName="active" className='signup-link'>
+            Already have an account? Login Here.
+          </NavLink>
+
+          </div>
         </div>
       </form>
     )
@@ -66,4 +75,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, actions)(SignupForm);
+export default connect(mapStateToProps, actions)(withRouter(SignupForm));
