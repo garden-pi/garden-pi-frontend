@@ -1,6 +1,6 @@
 # GARDEN PI
 Frontend developed by [Gabbie Piraino](https://github.com/pirainogi); project developed with [Steven Balasta](https://github.com/sbal13), [Ian Hollander](https://github.com/ihollander), and [Vishal Patel](https://github.com/vishalpatel2890)
-
+ 
 ** Work in Progress **
 
 ## Built With
