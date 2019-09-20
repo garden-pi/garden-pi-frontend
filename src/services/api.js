@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000"
+const BASE_URL = "https://garden-party-api.herokuapp.com"
 
 const API_VERSION = "api/v1"
 
