@@ -53,3 +53,34 @@
   font-size: 1.5vw;
   margin-top: 0.5vh;
 }
+
+.signup-login {
+  background-color: white;
+  padding: .8vw;
+  border-radius: 20px;
+  color: #404040;
+  text-decoration: none;
+  font-size: 1.5vw;
+  margin-top: 0.5vh;
+  margin-left: 20vh;
+}
+
+.bottombox-signup {
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgb(150, 171, 108);
+  border-radius: 0 0 36px 36px;
+  height: 15vh;
+  background-color: rgb(150, 171, 108);
+  margin-left: 8vw;
+  margin-right: 8vw;
+  text-align: center;
+}
+
+.already {
+  color: white;
+  text-decoration: none;
+  font-size: 2vw;
+  margin-top: 0.25vw;
+  margin-bottom: 0.25vw;
+}
